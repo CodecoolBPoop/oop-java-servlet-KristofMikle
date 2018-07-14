@@ -15,9 +15,9 @@ public class WebShopServlet extends HttpServlet {
 
     private void initItems() {
         ItemStore.listOfItems = new ArrayList<>();
-        ItemStore.addItem(new Item("Book", 69.99));
+        ItemStore.addItem(new Item("Lollipop", 6.99));
         ItemStore.addItem(new Item("Game", 60));
-        ItemStore.addItem(new Item("lollipop", 9));
+        ItemStore.addItem(new Item("Book", 9));
     }
 
     @Override
@@ -35,7 +35,7 @@ public class WebShopServlet extends HttpServlet {
             tableContent
                     .append("<tr>")
                     .append("<td>").append(item.getName()).append("</td>")
-                    .append("<td>").append(item.getPrice()).append("</td>")
+                    .append("<td>").append(item.getPrice()).append(" $</td>")
                     .append("<td>").append("<form action=\"/\" method=\"post\"><button name=\"add\" value=\"").append(item.getId()).append("\" type=\"submit\">Add</button></form>").append("</td>")
                     .append("<td>").append("<form action=\"/\" method=\"post\"><button name=\"remove\" value=\"").append(item.getId()).append("\" type=\"submit\">Remove</button></form>").append("</td>")
                     .append("</tr>");

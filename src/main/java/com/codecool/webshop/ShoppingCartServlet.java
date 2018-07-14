@@ -43,8 +43,8 @@ public class ShoppingCartServlet extends HttpServlet {
                         + "</table>\n"
                         + (sumOfPrices == 0 ?
                         "<h3>Your Cart is Empty</h3>" :
-                        "<h3>Link " + sumOfPrices +" </h3>")
-                        +"<a href=\"/shop\"><button>Shop</button></a>"
+                        "<h3>Sum of price: " + sumOfPrices +" $</h3>")
+                        +"<a href=\"/shop\"><button>Back to Shop</button></a>"
                         + "</body>\n"
                         + "</html>");
     }
